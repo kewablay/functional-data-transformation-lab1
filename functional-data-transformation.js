@@ -27,3 +27,9 @@ const isPalindrome = (str) => {
 console.log(isPalindrome("madam"))
 
 
+// d. Word count - Counts the number of words in a string 
+
+const wordCount = (str) => {
+    let count =  str.split(" ").length()
+    return "The number of words in the stirng is: ", count
+}

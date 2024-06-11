@@ -47,3 +47,16 @@ const doubleArray = (arr) => {
 
 console.log(doubleArray(["a", 1, "b", 2, "c", 3]));
 
+// b. Filter Even - filters out even numbers in an array 
+
+const filterEven = (arr) => {
+    return arr.filter((element) => {
+        // if element is not a number immediately return
+        if(isNaN(parseInt(element))) return ;
+
+        // else return it if its even 
+        return parseInt(element) % 2 === 0
+    })
+}
+
+console.log(filterEven(["a", 1, "b", 2, "c", 3, 8, 20, 35]));

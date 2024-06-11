@@ -177,7 +177,7 @@ const people = [
 ];
 const minAge = 20;
 console.log(filterByAge(people, minAge));
-// Output: [{ name: "John", age: 25 }, { name: "Alice", age: 30 }, { name: "Emma", age: 22 }]
+
 
 
 
@@ -219,5 +219,5 @@ const reverseAndCapitalize = compose(reverseString, capitalizeString);
 const reverseAndDoubleEven = compose(reverseString, doubleEvenNumbers);
 
 // Test cases
-console.log(reverseAndCapitalize("hello")); // Output: "OLLEH"
-console.log(reverseAndDoubleEven([1, 2, 3, 4, 5])); // Output: [10, 6, 3, 8, 1]
+console.log(reverseAndCapitalize("hello")); 
+console.log(reverseAndDoubleEven([1, 2, 3, 4, 5])); 

@@ -7,9 +7,17 @@ const capitalize = (str) => {
 console.log(capitalize("Hello kewa blay"));
 
 // b. Reverse a string
-const reverse = (str) => {
-  return str.split("").reverse().join("");
-};
+function reverse(str) {
+  let reversed = "";
+
+  // Iterate through the string in reverse order
+  for (let i = str.length - 1; i >= 0; i--) {
+    // Append each character to the reversed string
+    reversed += str[i];
+  }
+
+  return reversed;
+}
 
 console.log(reverse("hello kewa blay"));
 
@@ -78,5 +86,25 @@ const sum = (arr) => {
 // console.log(sum(["a", 1, "b", 2, "c", 3, 8, 20, 35]));
 console.log(sum([2, 3, 50, 10]));
 
+// d. average(arr) - calculate the average of all numbers in an array
 
-// d. 
+function average(arr) {
+  let sum = 0;
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    // Check if the element is a number
+    if (!isNaN(parseFloat(arr[i]))) {
+      // Convert the element to a number and add it to the sum
+      sum += parseFloat(arr[i]);
+      count++; // Increment the count of valid numbers
+    }
+  }
+
+  // Calculate the average
+  if (count > 0) {
+    return sum / count;
+  } else {
+    return 0; // Return 0 if no valid numbers were found
+  }
+}

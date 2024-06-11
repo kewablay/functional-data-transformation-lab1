@@ -47,16 +47,36 @@ const doubleArray = (arr) => {
 
 console.log(doubleArray(["a", 1, "b", 2, "c", 3]));
 
-// b. Filter Even - filters out even numbers in an array 
+// b. Filter Even - filters out even numbers in an array
 
 const filterEven = (arr) => {
-    return arr.filter((element) => {
-        // if element is not a number immediately return
-        if(isNaN(parseInt(element))) return ;
+  return arr.filter((element) => {
+    // if element is not a number immediately return
+    if (isNaN(parseInt(element))) return;
 
-        // else return it if its even 
-        return parseInt(element) % 2 === 0
-    })
-}
+    // else return it if its even
+    return parseInt(element) % 2 === 0;
+  });
+};
 
 console.log(filterEven(["a", 1, "b", 2, "c", 3, 8, 20, 35]));
+
+// c. Sum array - Calculates the sum of all elements in an array
+
+const sum = (arr) => {
+  let finalSum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    // If its not a number pass
+    if (isNaN(parseInt(arr[i]))) continue;
+    finalSum += parseInt(arr[i]);
+  }
+
+  return finalSum;
+};
+
+// console.log(sum(["a", 1, "b", 2, "c", 3, 8, 20, 35]));
+console.log(sum([2, 3, 50, 10]));
+
+
+// d. 
